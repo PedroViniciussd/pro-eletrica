@@ -1,0 +1,59 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+}
+
+
+.electric-line {
+  position: absolute;
+  width: 220px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #facc15, transparent);
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.7);
+  opacity: 0.25;
+  transform: rotate(-18deg);
+  animation: electricMove 8s linear infinite;
+}
+
+.electric-line-1 {
+  top: 18%;
+  left: -240px;
+}
+
+.electric-line-2 {
+  top: 52%;
+  left: -280px;
+  animation-delay: 2.5s;
+}
+
+.electric-line-3 {
+  top: 78%;
+  left: -260px;
+  animation-delay: 5s;
+}
+
+@keyframes electricMove {
+  0% {
+    transform: translateX(0) rotate(-18deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.18;
+  }
+
+  100% {
+    transform: translateX(140vw) rotate(-18deg);
+    opacity: 0;
+  }
+}
