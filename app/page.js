@@ -18,6 +18,51 @@ const instagram = 'https://www.instagram.com/pro_eletrica_stm/';
 export default function Home() {
   return (
     <main className="overflow-hidden bg-black text-white">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Electrician',
+      name: 'Pro Elétrica STM',
+      description:
+        'Mais de 10 anos de experiência em elétrica residencial, energia solar, CFTV, alarmes e segurança eletrônica.',
+      telephone: '+55 93 98438-8197',
+      url: 'https://pro-eletrica.vercel.app',
+      image: 'https://pro-eletrica.vercel.app/assets/logo-pro-eletrica.png',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Santarém',
+        addressRegion: 'PA',
+        addressCountry: 'BR',
+      },
+      areaServed: ['Santarém', 'Pará'],
+      sameAs: ['https://www.instagram.com/pro_eletrica_stm/'],
+      openingHours: [
+        'Mo-Fr 07:00-17:30',
+        'Sa 07:00-12:00'
+      ],
+      makesOffer: [
+        {
+          '@type': 'Offer',
+          name: 'Instalações elétricas residenciais',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Instalação de câmeras de segurança CFTV',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Energia solar',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Alarmes e segurança eletrônica',
+        },
+      ],
+    }),
+  }}
+/>
 
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
   <div className="electric-line electric-line-1" />
@@ -120,10 +165,9 @@ export default function Home() {
             ">
               +10 anos de experiência
             </span>
-
-            <h1 className="mt-8 text-4xl font-black leading-tight md:text-5xl">
-              Soluções elétricas e segurança para seu imóvel.
-            </h1>
+<h1 className="mt-8 text-4xl font-black leading-tight md:text-5xl">
+  Eletricista em Santarém com soluções em elétrica, energia solar e CFTV.
+</h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-300">
               Especialistas em elétrica residencial, energia solar, CFTV,
@@ -175,7 +219,7 @@ export default function Home() {
 
             <img
               src="/assets/hero-pro-eletrica.png"
-              alt="Serviços elétricos"
+              alt="Serviços de elétrica residencial, energia solar e CFTV em Santarém"
               className="
                 relative z-10
                 rounded-[36px]
@@ -391,7 +435,7 @@ export default function Home() {
 
         <iframe
           title="Mapa"
-          src="https://www.google.com/maps?q=Santarém+PA&output=embed"
+          src="https://www.google.com/maps?q=Pro%20El%C3%A9trica%20STM%20Santar%C3%A9m%20PA&output=embed"
           className="absolute inset-0 h-full w-full"
           loading="lazy"
         />
